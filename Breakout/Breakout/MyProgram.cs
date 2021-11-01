@@ -81,14 +81,12 @@ namespace Breakout
 
             //platform
             ConsoleKeyInfo input = new ConsoleKeyInfo();
-            ConsoleKeyInfo oldInput;
             Platform platform = new Platform(1, new Point(1, floorCord)); 
 
             //ball Cordinates
             Point spawn = new Point(platform.position.x, floorCord - 2);
             Ball ball = new Ball(spawn, new Point(1, 1));
             Point prevPosition = new Point(ball.position);
-
 
             //Other
             int speedChanger = 0;
@@ -341,27 +339,6 @@ namespace Breakout
                             score++;
                         }
                     }
-                
-                    /*else if (ball.position.y == myBricks[i].yPos +1 && ball.position.x == myBricks[i].xPos - ball.position.x && myBricks[i].active == true || ball.position.y == myBricks[i].yPos - 1 && ball.position.x == myBricks[i].xPos - ball.position.x && myBricks[i].active == true)
-                    {
-                        //Change Direction
-                        ball.position.x *= -1;
-
-                        //Clear brick
-                        Console.SetCursorPosition(myBricks[i].xPos, myBricks[i].yPos);
-                        Console.Write("  ");
-
-                        //Deactivate Brick
-                        myBricks[i].active = false;
-
-                        //Change Speed
-                        Speed();
-
-                        //Add more score
-                        score++;
-                    }*/
-
-
                 }
                 #endregion
 
