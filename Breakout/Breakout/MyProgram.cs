@@ -10,7 +10,7 @@ namespace Breakout
     class MyProgram
     {
 
-
+        #region Structs
         //struct for brick array
         struct Bricks
         {
@@ -55,6 +55,8 @@ namespace Breakout
                 position = pos;
             }
         }
+        #endregion
+
         public void Run()
         {
 
